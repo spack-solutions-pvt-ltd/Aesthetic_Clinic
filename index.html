@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Aesthetic Clinic — Nizampet | Strategy Deck 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A84C;--gold-lt:#E8D5A3;--gold-pale:#FAF5E9;--gold-dim:rgba(201,168,76,0.12);
+  --ink:#0F0E0C;--ink2:#1C1A16;--ink3:#2A2720;
+  --cream:#FDFCF8;--cream2:#F5F1E8;--cream3:#EDE8DC;
+  --muted:#8A8070;--muted2:#B0A898;
+  --green:#1E7E5A;--red:#B83232;
+  --r:14px;--rL:20px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--ink);color:var(--cream);line-height:1.6;overflow-x:hidden}
+
+/* ── SCROLL PROGRESS ── */
+#bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#8B6914,var(--gold),#E8D5A3);z-index:200;width:0;transition:width .08s}
+
+/* ── NAV ── */
+nav{position:fixed;top:3px;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:58px;background:rgba(15,14,12,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.15)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--gold);letter-spacing:.06em}
+.nav-links{display:flex;gap:0}
+.nl{padding:6px 14px;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;transition:all .2s}
+.nl:hover,.nl.on{color:var(--gold);border-bottom-color:var(--gold)}
+@media(max-width:900px){.nav-links{display:none}}
+
+/* ── SLIDES ── */
+section{min-height:100vh;padding:100px 5vw 80px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.inner{width:100%;max-width:1140px;position:relative;z-index:2}
+
+/* ghost number */
+section::after{content:attr(data-n);position:absolute;right:-2vw;bottom:-5vw;font-family:'Cormorant Garamond',serif;font-size:30vw;font-weight:700;color:rgba(201,168,76,.025);line-height:1;pointer-events:none;z-index:0}
+
+/* ── COVER ── */
+#s0{background:var(--ink);text-align:center}
+.cover-kicker{font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem}
+.cover-h{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:600;line-height:1.0;color:var(--cream);margin-bottom:1.5rem}
+.cover-h em{color:var(--gold);font-style:italic}
+.divider{width:56px;height:2px;background:var(--gold);margin:0 auto 2rem}
+.cover-sub{font-size:17px;font-weight:300;color:rgba(253,252,248,.5);max-width:600px;margin:0 auto 3rem;line-height:1.8}
+.cover-tags{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.ct{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+
+/* ── TYPOGRAPHY ── */
+.kicker{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+.sh{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.5vw,58px);font-weight:600;line-height:1.1;color:var(--cream);margin-bottom:.6rem}
+.sh em{color:var(--gold);font-style:italic}
+.sd{font-size:15px;font-weight:300;color:rgba(253,252,248,.5);max-width:720px;line-height:1.8;margin-bottom:3rem}
+
+/* ── STAT GRID ── */
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.12);border-radius:var(--r);overflow:hidden;margin-bottom:2.5rem}
+.sc{background:var(--ink2);padding:2rem 1.6rem;transition:background .2s}
+.sc:hover{background:var(--ink3)}
+.sn{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.35rem}
+.sl{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(253,252,248,.35);margin-bottom:.5rem}
+.ss{font-size:13px;color:rgba(253,252,248,.55);line-height:1.6}
+
+/* ── BAR CHART ── */
+.bars{margin-bottom:2.5rem}
+.br{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.bl{font-size:12px;color:var(--muted);width:44px;text-align:right;flex-shrink:0}
+.bt{flex:1;height:5px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden}
+.bf{height:100%;background:linear-gradient(90deg,#7A5C18,var(--gold),#E8D5A3);border-radius:3px;animation:grow 1.4s cubic-bezier(.22,1,.36,1) both;animation-delay:var(--d,0s)}
+@keyframes grow{from{width:0!important}to{width:var(--w)}}
+.bv{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--gold);width:72px;flex-shrink:0}
+
+/* ── CARDS ── */
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;margin-bottom:2.5rem}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-bottom:2.5rem}
+.card{background:var(--ink2);border:1px solid rgba(201,168,76,.1);border-radius:var(--r);padding:1.8rem;transition:border-color .2s,transform .2s}
+.card:hover{border-color:rgba(201,168,76,.35);transform:translateY(-2px)}
+.card-icon{font-size:26px;margin-bottom:1rem}
+.card-h{font-size:15px;font-weight:500;color:var(--cream);margin-bottom:.6rem}
+.card-b{font-size:13.5px;color:rgba(253,252,248,.52);line-height:1.75}
+.card-b strong{color:var(--gold);font-weight:500}
+
+/* ── HIGHLIGHT BOX ── */
+.hb{background:rgba(201,168,76,.05);border-left:3px solid var(--gold);border-radius:0 var(--r) var(--r) 0;padding:1.4rem 1.75rem;margin-bottom:2rem;font-size:14px;color:rgba(253,252,248,.65);line-height:1.8}
+.hb strong{color:var(--gold);font-weight:500}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:2.5rem}
+.tbl th{text-align:left;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding:.75rem 1rem;border-bottom:1px solid rgba(201,168,76,.15)}
+.tbl td{padding:.9rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(253,252,248,.7);vertical-align:top;line-height:1.55}
+.tbl tr:hover td{background:rgba(201,168,76,.03)}
+.tn{font-weight:500;color:var(--cream);font-size:14px}
+.tbl .num{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:15px}
+.tbl .num-g{font-family:'Cormorant Garamond',serif;color:#4EC98A;font-size:15px}
+.tbl tr.tot td{border-top:1px solid rgba(201,168,76,.25);font-weight:500;color:var(--cream)}
+.badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:10px;font-weight:600;letter-spacing:.04em}
+.bw{background:rgba(184,115,23,.18);color:#E8A030}
+.bo{background:rgba(30,126,90,.18);color:#4EC98A}
+.br2{background:rgba(184,50,50,.15);color:#E07070}
+.bm{background:rgba(201,168,76,.14);color:var(--gold)}
+
+/* ── ROADMAP ── */
+.rm{position:relative;padding-left:2.8rem;margin-bottom:2.5rem}
+.rm::before{content:'';position:absolute;left:10px;top:8px;bottom:8px;width:1px;background:rgba(201,168,76,.2)}
+.ri{position:relative;margin-bottom:2.2rem}
+.rd{position:absolute;left:-2.8rem;top:5px;width:22px;height:22px;border-radius:50%;background:var(--ink);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center}
+.rdi{width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.rm-q{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
+.rm-t{font-size:17px;font-weight:500;color:var(--cream);margin-bottom:.4rem}
+.rm-b{font-size:13px;color:rgba(253,252,248,.5);line-height:1.7}
+
+/* ── TWO COL ── */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+@media(max-width:720px){.two{grid-template-columns:1fr}}
+
+/* ── QUARTER CARDS ── */
+.qg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:2.5rem}
+.qc{background:var(--ink2);border:1px solid rgba(201,168,76,.1);border-radius:var(--r);overflow:hidden;transition:transform .2s,border-color .2s}
+.qc:hover{transform:translateY(-3px);border-color:rgba(201,168,76,.32)}
+.qh{padding:1rem 1.3rem;background:rgba(201,168,76,.06);border-bottom:1px solid rgba(201,168,76,.1);display:flex;align-items:center;justify-content:space-between}
+.ql{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.qm{font-size:11px;color:var(--muted)}
+.qt{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--cream);padding:1rem 1.3rem .5rem}
+.qb{padding:.4rem 1.3rem 1.3rem}
+.qi{display:flex;align-items:flex-start;gap:.6rem;font-size:12.5px;color:rgba(253,252,248,.57);line-height:1.65;padding:.28rem 0}
+.qi::before{content:'—';color:var(--gold);flex-shrink:0;margin-top:1px}
+.qkpi{margin-top:1rem;padding-top:.75rem;border-top:1px solid rgba(201,168,76,.1);font-size:11px;color:var(--muted)}
+.qkpi strong{color:var(--gold);font-weight:500}
+
+/* ── MEMBERSHIP ── */
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-bottom:2.5rem}
+.mc{background:var(--ink2);border:1px solid rgba(201,168,76,.12);border-radius:16px;padding:2rem 1.6rem;position:relative;transition:border-color .2s}
+.mc:hover{border-color:rgba(201,168,76,.4)}
+.mc.feat{border:2px solid var(--gold)}
+.mpop{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ink);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 16px;border-radius:20px;white-space:nowrap}
+.mt{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
+.mn{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--cream);margin-bottom:.5rem}
+.mp{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.25rem}
+.mp span{font-size:16px;font-weight:300;color:var(--muted);font-family:'Outfit',sans-serif}
+.mpn{font-size:11px;color:var(--muted);margin-bottom:1.5rem}
+.md{height:1px;background:rgba(201,168,76,.12);margin:1.2rem 0}
+.mi{display:flex;align-items:flex-start;gap:.6rem;font-size:12.5px;color:rgba(253,252,248,.6);line-height:1.65;padding:.22rem 0}
+.mc-check{color:var(--gold);font-size:13px;margin-top:1px;flex-shrink:0}
+
+/* ── OFFER CARDS ── */
+.og{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-bottom:2.5rem}
+.oc{background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.15);border-radius:var(--r);padding:1.6rem;text-align:center;transition:background .2s}
+.oc:hover{background:rgba(201,168,76,.08)}
+.oi{font-size:30px;margin-bottom:.75rem}
+.ot{font-size:14px;font-weight:500;color:var(--cream);margin-bottom:.5rem}
+.ob{font-size:12.5px;color:rgba(253,252,248,.5);line-height:1.7}
+.ob strong{color:var(--gold);font-weight:500}
+
+/* ── WHY ── */
+.wg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-bottom:2.5rem}
+.wc{display:flex;gap:1rem}
+.wn{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:rgba(201,168,76,.25);line-height:1;flex-shrink:0;width:48px}
+.wct{font-size:15px;font-weight:500;color:var(--cream);margin-bottom:.35rem}
+.wcb{font-size:13px;color:rgba(253,252,248,.5);line-height:1.7}
+
+/* ── CTA ── */
+.cta{background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.2);border-radius:20px;padding:3.5rem 2rem;text-align:center;margin-bottom:2rem}
+.cta-h{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:600;color:var(--cream);margin-bottom:.75rem}
+.cta-h em{color:var(--gold);font-style:italic}
+.cta-s{font-size:15px;color:rgba(253,252,248,.45);margin-bottom:2.5rem;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.8}
+.btn{display:inline-block;padding:15px 44px;background:var(--gold);color:var(--ink);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:background .2s,transform .15s;text-decoration:none}
+.btn:hover{background:var(--gold-lt);transform:translateY(-2px)}
+
+/* ── TAGS ── */
+.tag{display:inline-block;padding:3px 11px;background:rgba(201,168,76,.09);color:var(--gold);border-radius:20px;font-size:11px;font-weight:500;letter-spacing:.04em;margin:3px}
+
+/* ── SEP ── */
+.sep{height:1px;background:rgba(201,168,76,.09);margin:1rem 0 2.5rem}
+
+/* ── SLIDE NUM ── */
+.snum{position:absolute;bottom:2rem;right:2.5rem;font-family:'Cormorant Garamond',serif;font-size:12px;color:rgba(201,168,76,.25);letter-spacing:.12em}
+
+/* ── ALT BG ── */
+.alt{background:#161410}
+
+/* ── ANIMATIONS ── */
+.fu{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fu.vis{opacity:1;transform:translateY(0)}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);border-top:1px solid rgba(201,168,76,.1);padding:2.5rem;text-align:center;font-size:11px;color:var(--muted);letter-spacing:.06em}
+
+/* ── SCROLL NAV DOTS ── */
+.dots{position:fixed;right:2rem;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:.75rem}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(201,168,76,.25);cursor:pointer;transition:all .3s;border:1px solid rgba(201,168,76,.4)}
+.dot.on{background:var(--gold);transform:scale(1.3)}
+@media(max-width:900px){.dots{display:none}}
+
+/* ── ACCENT LINE ── */
+.aline{display:flex;align-items:center;gap:1rem;margin-bottom:3rem}
+.aline::before,.aline::after{content:'';flex:1;height:1px;background:rgba(201,168,76,.12)}
+.aline-txt{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:rgba(201,168,76,.5)}
+</style>
+</head>
+<body>
+
+<div id="bar"></div>
+
+<nav>
+  <div class="nav-logo">Aesthetic Clinic — Nizampet 2026</div>
+  <div class="nav-links">
+    <button class="nl" onclick="go('s0')">Cover</button>
+    <button class="nl" onclick="go('s1')">Market</button>
+    <button class="nl" onclick="go('s2')">Location</button>
+    <button class="nl" onclick="go('s3')">Competitors</button>
+    <button class="nl" onclick="go('s4')">Financials</button>
+    <button class="nl" onclick="go('s5')">Roadmap</button>
+    <button class="nl" onclick="go('s6')">Quarters</button>
+    <button class="nl" onclick="go('s7')">Marketing</button>
+    <button class="nl" onclick="go('s8')">Offers</button>
+    <button class="nl" onclick="go('s9')">Close</button>
+  </div>
+</nav>
+
+<div class="dots" id="dots"></div>
+
+<!-- ══════════════════════════════════ 00 COVER -->
+<section id="s0" data-n="0">
+<div class="inner" style="text-align:center">
+  <p class="cover-kicker fu">Confidential Strategy Presentation · Hyderabad · 2026</p>
+  <h1 class="cover-h fu" style="transition-delay:.1s">
+    Nizampet's First<br><em>Luxury Aesthetic</em><br>Destination.
+  </h1>
+  <div class="divider fu" style="transition-delay:.2s"></div>
+  <p class="cover-sub fu" style="transition-delay:.25s">
+    A complete, data-backed 1-year go-to-market strategy to launch, dominate local competition, and build Hyderabad's most trusted aesthetic brand — starting from the northwest corridor.
+  </p>
+  <div class="cover-tags fu" style="transition-delay:.35s">
+    <span class="ct">Prepared May 2026</span>
+    <span class="ct">·</span>
+    <span class="ct">Nizampet, Hyderabad</span>
+    <span class="ct">·</span>
+    <span class="ct">Confidential</span>
+  </div>
+</div>
+<div class="snum">00 / 09</div>
+</section>
+
+<!-- ══════════════════════════════════ 01 MARKET -->
+<section class="alt" id="s1" data-n="1">
+<div class="inner">
+  <p class="kicker fu">01 — Market Validation</p>
+  <h2 class="sh fu">The Industry You're Entering<br>Is Worth <em>Billions</em> — and Still Growing</h2>
+  <p class="sd fu">Every number below comes from Grand View Research, Precedence Research, and IMARC Group. This is not hype — it's the market reality you're stepping into in 2026.</p>
+
+  <div class="sg fu">
+    <div class="sc">
+      <div class="sn">$110B</div>
+      <div class="sl">Global Market 2026</div>
+      <div class="ss">Up from $98.8B in 2025. Projected to reach $240B by 2033. Growing at 11.9% CAGR.</div>
+    </div>
+    <div class="sc">
+      <div class="sn">₹1.5L Cr</div>
+      <div class="sl">India Beauty & Aesthetics</div>
+      <div class="ss">India's total beauty & wellness market. The aesthetic segment is growing fastest within it.</div>
+    </div>
+    <div class="sc">
+      <div class="sn">$7.4B</div>
+      <div class="sl">India Aesthetic Market 2033</div>
+      <div class="ss">At 15.6% CAGR — India is the single fastest-growing aesthetic market in all of Asia Pacific.</div>
+    </div>
+    <div class="sc">
+      <div class="sn">13%</div>
+      <div class="sl">India Annual Growth Rate</div>
+      <div class="ss">India's aesthetic market growing at 13% annually through 2027. Asia Pacific leads at 16% CAGR for injectables.</div>
+    </div>
+  </div>
+
+  <p class="kicker fu" style="margin-bottom:1rem">Global Aesthetic Market Revenue Growth</p>
+  <div class="bars fu">
+    <div class="br"><div class="bl">2022</div><div class="bt"><div class="bf" style="--w:35%;--d:.0s;width:35%"></div></div><div class="bv">$71B</div></div>
+    <div class="br"><div class="bl">2024</div><div class="bt"><div class="bf" style="--w:50%;--d:.1s;width:50%"></div></div><div class="bv">$88B</div></div>
+    <div class="br"><div class="bl">2026</div><div class="bt"><div class="bf" style="--w:63%;--d:.2s;width:63%"></div></div><div class="bv">$110B</div></div>
+    <div class="br"><div class="bl">2029</div><div class="bt"><div class="bf" style="--w:78%;--d:.3s;width:78%"></div></div><div class="bv">$170B</div></div>
+    <div class="br"><div class="bl">2033</div><div class="bt"><div class="bf" style="--w:100%;--d:.4s;width:100%"></div></div><div class="bv">$240B</div></div>
+  </div>
+
+  <div class="grid2 fu">
+    <div class="card">
+      <div class="card-icon">👩</div>
+      <div class="card-h">Who Is the Patient?</div>
+      <div class="card-b">Women are <strong>86%</strong> of all procedure patients globally. The <strong>35–50 age bracket</strong> is the largest group at 42.68% of India's market. But women aged <strong>18–34 are the fastest-growing segment at 16.83% CAGR</strong> — driven by reels, selfie culture, and social awareness.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">💉</div>
+      <div class="card-h">What's Selling?</div>
+      <div class="card-b">Non-invasive procedures — Botox, fillers, laser, HIFU, HydraFacial — dominate at <strong>62% of global revenue.</strong> Specialty clinics command <strong>40%+ of market share.</strong> Laser-based devices alone are a <strong>$2.1B annual market.</strong> Body contouring growing at 17% CAGR.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <div class="card-h">What's Driving Demand in India?</div>
+      <div class="card-b">Rising disposable incomes. Social media influence. Changing beauty standards. Medical tourism. <strong>India's male aesthetic demand is growing at 15.85% CAGR</strong> — a largely untapped, high-value segment most clinics ignore.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">💰</div>
+      <div class="card-h">Why the Clinic Model Is Exceptional</div>
+      <div class="card-b">Unlike conventional businesses, aesthetic clinics run on a <strong>high-value, low-overhead model.</strong> Net margins of <strong>10–25%.</strong> Patient LTV of <strong>₹40K–₹1.2L+</strong> over 4 years. A single well-run treatment room generates <strong>₹2–4 Cr annually.</strong> Approximately <strong>20% of revenue</strong> comes from skincare product sales — with zero extra overhead.</div>
+    </div>
+  </div>
+
+  <div class="hb fu">
+    <strong>The bottom line for you as a doctor:</strong> You are not entering a crowded, mature market. You are entering a structurally underpenetrated growth market — specifically in Tier-2 suburbs like Nizampet — that is expanding at 13–16% per year, shifting from hospital-based to specialty clinic-based care, and generating wealth for early movers. The window to establish first-mover luxury positioning in Nizampet is open right now.
+  </div>
+</div>
+<div class="snum">01 / 09</div>
+</section>
+
+<!-- ══════════════════════════════════ 02 LOCATION -->
+<section id="s2" data-n="2">
+<div class="inner">
+  <p class="kicker fu">02 — Location Advantage</p>
+  <h2 class="sh fu">Why <em>Nizampet</em> Is the<br>Smartest Address You Could Choose</h2>
+  <p class="sd fu">This isn't optimism. It's geography, demographics, and timing aligning in one suburb — and nobody in the luxury segment has noticed yet.</p>
+
+  <div class="sg fu">
+    <div class="sc">
+      <div class="sn">3.7L+</div>
+      <div class="sl">Estimated Population 2026</div>
+      <div class="ss">Grew from 48,835 in 2011 census to 370,000+ by 2019. Still expanding. Hyderabad metro at 11.6M, growing 2.4%/year.</div>
+    </div>
+    <div class="sc">
+      <div class="sn">20,000+</div>
+      <div class="sl">Apartments Under Construction</div>
+      <div class="ss">Over 20,000 flats and villa projects active. New dual-income households arriving every month. Each one is a potential patient.</div>
+    </div>
+    <div class="sc">
+      <div class="sn" style="font-size:clamp(22px,3.5vw,42px)">ALMOST ZERO</div>
+      <div class="sl">Luxury Aesthetic Clinics Here</div>
+      <div class="ss">Only a handful of premium-positioned aesthetic clinics exist in Nizampet — and none own the luxury end of the market. That gap is your moat — and it won't stay empty forever.</div>
+    </div>
+    <div class="sc">
+      <div class="sn">15 min</div>
+      <div class="sl">From HITEC City IT Corridor</div>
+      <div class="ss">Nizampet sits at the edge of Hyderabad's IT belt. Salaried tech professionals — your highest-spending demographic — live right here.</div>
+    </div>
+  </div>
+
+  <div class="grid2 fu">
+    <div class="card">
+      <div class="card-icon">🏙️</div>
+      <div class="card-h">Hyderabad's Fastest-Growing Suburb</div>
+      <div class="card-b">Nizampet is part of the Cyberabad Municipal Corporation and is officially recognized as <strong>"one of the fastest-growing suburbs around the IT corridor."</strong> Affordability + HITEC City proximity = relentless migration of young working professionals with spending power.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">💼</div>
+      <div class="card-h">Your Core Target Lives Here</div>
+      <div class="card-b">Large population of <strong>Andhra settlers, IT professionals, and nuclear families</strong> with dual incomes and high aesthetic awareness. Women aged 25–48 with disposable income are your primary audience — and they're within 3 km of your clinic.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🗺️</div>
+      <div class="card-h">Massive Catchment Zone</div>
+      <div class="card-b">Your clinic serves: <strong>Bachupally, Pragathi Nagar, Gajularamaram, KPHB Colony, Miyapur, Kukatpally, Hafeezpet, Ameenpur, Madinaguda</strong> — all within 10–15 minutes. No luxury aesthetic clinic exists across this entire corridor.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🚗</div>
+      <div class="card-h">Nearest Premium Competitor Is Far</div>
+      <div class="card-b">Sasha Luxe (the only real luxury comparable) is at Gachibowli — <strong>25+ minutes away.</strong> That travel friction is your opportunity. Patients who currently go there will switch to a better-quality, closer option. That option is you.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">📈</div>
+      <div class="card-h">Rising Property Values = Rising Aspirations</div>
+      <div class="card-b">Government municipal water provision in 2018 triggered a property appreciation wave in Nizampet. Rising values signal a wealthier, more aspirational resident base — exactly the kind that prioritizes appearance, wellness, and lifestyle services.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔭</div>
+      <div class="card-h">Expansion Roadmap Is Natural</div>
+      <div class="card-b">Once you dominate Nizampet, the expansion path is clear: <strong>Bachupally → Kompally → Madinaguda.</strong> All three are similar growth suburbs with identical profiles. Your Nizampet brand equity becomes a franchise asset worth crores.</div>
+    </div>
+  </div>
+</div>
+<div class="snum">02 / 09</div>
+</section>
+
+<!-- ══════════════════════════════════ 03 COMPETITORS -->
+<section class="alt" id="s3" data-n="3">
+<div class="inner">
+  <p class="kicker fu">03 — Competitive Landscape</p>
+  <h2 class="sh fu">Know Your Rivals.<br><em>Know Their Gaps.</em></h2>
+  <p class="sd fu">A forensic audit of every meaningful player in and around Nizampet — their current stage, marketing activities, and precisely where you outflank them.</p>
+
+  <div class="fu" style="overflow-x:auto">
+  <table class="tbl">
+    <thead>
+      <tr>
+        <th>Clinic</th>
+        <th>Location</th>
+        <th>Tier</th>
+        <th>What They Do Well</th>
+        <th>Their Critical Gap</th>
+        <th>Their Marketing</th>
+        <th>Threat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="tn">Scala Skin & Hair</div>Medico-aesthetic</td>
+        <td>Nizampet X-Road<br><small style="color:var(--muted)">Direct area</small></td>
+        <td><span class="badge bm">Mid-market</span></td>
+        <td>Established local brand, Practo-listed, medical + aesthetic combo</td>
+        <td>No luxury ambience. No premium pricing. Clinical, not aspirational. Zero content strategy.</td>
+        <td>Practo listing only. No active social media. Word of mouth.</td>
+        <td><span class="badge bw">Medium</span></td>
+      </tr>
+      <tr>
+        <td><div class="tn">Dr. Padmaja's Skin & Hair</div>Solo practitioner</td>
+        <td>Pragathi Nagar<br><small style="color:var(--muted)">~2 km</small></td>
+        <td><span class="badge br2">Budget</span></td>
+        <td>Trusted local doctor. ₹400 consult. Long-term patient base.</td>
+        <td>Part-time evening hours only. No advanced technology. No digital presence. No branding.</td>
+        <td>Zero visible marketing. Word of mouth only.</td>
+        <td><span class="badge bo">Low</span></td>
+      </tr>
+      <tr>
+        <td><div class="tn">Akshay Skin Hair & Laser</div>Dermatology clinic</td>
+        <td>Pragathi Nagar<br><small style="color:var(--muted)">~2 km</small></td>
+        <td><span class="badge bm">Mid-market</span></td>
+        <td>Has laser equipment. Evening hours. Decent footfall. ₹500 consult.</td>
+        <td>No luxury positioning. No website brand story. Reactive marketing. No membership model.</td>
+        <td>Basic Practo listing. No Instagram strategy. No Google Ads.</td>
+        <td><span class="badge bw">Medium</span></td>
+      </tr>
+      <tr>
+        <td><div class="tn">Kaya Clinic</div>National chain</td>
+        <td>Kukatpally SMR Heights<br><small style="color:var(--muted)">~4 km</small></td>
+        <td><span class="badge bm">Mid-premium</span></td>
+        <td>National brand recognition. Standardized treatments. ₹750 consult. Strong Practo reviews.</td>
+        <td>Corporate, impersonal feel. Limited hours (11am–3pm only). Far for Nizampet patients. No local story.</td>
+        <td>Google Ads, Practo Ads. Basic Instagram. No local influencer strategy.</td>
+        <td><span class="badge bw">Medium</span></td>
+      </tr>
+      <tr>
+        <td><div class="tn">Oliva Skin & Hair</div>125+ MD chain</td>
+        <td>Kukatpally KPHB<br><small style="color:var(--muted)">~4 km</small></td>
+        <td><span class="badge bm">Mid-premium</span></td>
+        <td>Huge brand. US-FDA equipment. 8L+ clients served. Strong digital advertising. Targets Nizampet area.</td>
+        <td>Factory-style experience. No personalization. High volume = low intimacy. Not a "special" visit. Not luxury.</td>
+        <td>Heavy Google + Meta Ads. Practo Ads. No organic content strategy. No influencer collabs.</td>
+        <td><span class="badge bw">High — different lane</span></td>
+      </tr>
+      <tr>
+        <td><div class="tn">Reborn Clinics</div>Laser specialist</td>
+        <td>Kukatpally KPHB<br><small style="color:var(--muted)">~5 km</small></td>
+        <td><span class="badge bm">Mid-market</span></td>
+        <td>Laser + hair transplant focus. Good website. Explicitly targets Nizampet in SEO copy.</td>
+        <td>Single-specialty only. No holistic aesthetic offering. No membership model. Clinical feel.</td>
+        <td>Good SEO. Basic Instagram. No influencer. No loyalty program.</td>
+        <td><span class="badge bw">Medium</span></td>
+      </tr>
+      <tr>
+        <td><div class="tn">HK Permanent Makeup Clinic</div>Specialty beauty clinic</td>
+        <td>Nizampet area<br><small style="color:var(--muted)">Direct area</small></td>
+        <td><span class="badge bm">Niche-premium</span></td>
+        <td>Established local name in permanent makeup. Loyal niche clientele. Known brand within Nizampet's beauty community.</td>
+        <td>Single-service focus — permanent makeup only. No dermatology, no laser, no anti-aging treatments. Limited scope means limited revenue ceiling.</td>
+        <td>Mostly referral and word-of-mouth. Some Instagram presence. No paid ads or SEO strategy visible.</td>
+        <td><span class="badge bw">Medium — different category</span></td>
+      </tr>
+      <tr>
+        <td><div class="tn">Sasha Luxe</div>Premium chain</td>
+        <td>Gachibowli / Madhapur<br><small style="color:var(--muted)">25 km+</small></td>
+        <td><span class="badge bo">Premium</span></td>
+        <td>True luxury positioning. Cosmetic surgeons. Beautiful environments. Strong Instagram content.</td>
+        <td>Too far for daily Nizampet usage. Zero northwest Hyderabad presence. This is your benchmark — and proof premium pricing works.</td>
+        <td>Strong Instagram. Before/after content. Some influencer work. No Nizampet targeting.</td>
+        <td><span class="badge bo">Low (distance)</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="hb fu">
+    <strong>The Strategic Verdict:</strong> No competitor in Nizampet or its immediate catchment combines (1) luxury physical environment + (2) doctor-owned credibility + (3) advanced technology + (4) deeply personalized experience + (5) a proactive digital content strategy. That five-part combination is your white space. Own it before someone else does.
+  </div>
+
+  <div class="grid2 fu">
+    <div class="card">
+      <div class="card-h">What Competitors Are Doing for Marketing</div>
+      <div class="card-b">
+        <strong>Oliva & Kaya:</strong> Heavy Google Ads + Practo. Decent paid presence. But no organic story, no local authenticity.<br><br>
+        <strong>Scala & Local Clinics:</strong> 100% dependent on word-of-mouth and Practo. Zero social media strategy.<br><br>
+        <strong>Gap across everyone:</strong> Nobody is doing reels-led transformation content, patient storytelling, WhatsApp community, local micro-influencer collabs, or bridal campaigns. These are yours to own from Day 1.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-h">The Pricing Landscape — Your Band</div>
+      <div class="card-b">
+        Budget local clinics: <strong>₹400–₹750</strong> per consultation.<br><br>
+        Mid-market chains (Oliva, Kaya): <strong>₹750–₹3,500</strong> per session.<br><br>
+        Sasha Luxe: <strong>₹5,000–₹25,000+</strong> per treatment.<br><br>
+        <strong>Your sweet spot: ₹2,500–₹18,000 per session.</strong> Aspirational but accessible. Premium pricing for a genuinely differentiated experience — and no one in Nizampet owns this band today.
+      </div>
+    </div>
+  </div>
+</div>
+<div class="snum">03 / 09</div>
+</section>
+
+<!-- ══════════════════════════════════ 04 FINANCIALS -->
+<section id="s4" data-n="4">
+<div class="inner">
+  <p class="kicker fu">04 — Financial Projections</p>
+  <h2 class="sh fu">What Does <em>Your Slice</em><br>of This Market Look Like?</h2>
+  <p class="sd fu">Conservative numbers. Realistic assumptions. Based on comparable Indian aesthetic clinic benchmarks and industry LTV data. These are achievable — not aspirational fantasies.</p>
+
+  <div class="sg fu">
+    <div class="sc">
+      <div class="sn">₹18–22L</div>
+      <div class="sl">Monthly Revenue by Month 6</div>
+      <div class="ss">8–10 patients/day at avg ₹6,500–₹9,000 per session. Standard for a well-marketed single-room luxury clinic.</div>
+    </div>
+    <div class="sc">
+      <div class="sn">₹2–2.5 Cr</div>
+      <div class="sl">Year 1 Total Revenue Target</div>
+      <div class="ss">Conservative full-year estimate factoring slow Q1 ramp-up and accelerating Q3–Q4. Achievable without referrals from existing practice.</div>
+    </div>
+    <div class="sc">
+      <div class="sn">20–25%</div>
+      <div class="sl">Net Profit Margin (Stabilized)</div>
+      <div class="ss">Industry benchmark for well-run aesthetic clinics. After rent, salaries, consumables, and marketing. ₹40–60L net profit Year 1.</div>
+    </div>
+    <div class="sc">
+      <div class="sn">₹80K+</div>
+      <div class="sl">Patient Lifetime Value (LTV)</div>
+      <div class="ss">4 treatments/year at ₹8K avg, retained 3 years = ₹96K LTV. Memberships and upsells extend this further.</div>
+    </div>
+  </div>
+
+  <p class="kicker fu" style="margin-bottom:1rem">Monthly Revenue Ramp — Year 1</p>
+  <div class="fu" style="overflow-x:auto">
+  <table class="tbl">
+    <thead>
+      <tr><th>Month</th><th>Phase</th><th>Patients/Day</th><th>Avg Ticket</th><th>Monthly Revenue</th><th>Cumulative</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1–2</td><td>Launch & Awareness</td><td>3–5</td><td>₹5,000</td><td class="num">₹3–7.5L</td><td class="num">₹7.5L</td></tr>
+      <tr><td>3–4</td><td>Gaining Traction</td><td>6–8</td><td>₹6,000</td><td class="num">₹10.8–14.4L</td><td class="num">₹32L</td></tr>
+      <tr><td>5–6</td><td>Momentum Building</td><td>8–10</td><td>₹7,000</td><td class="num">₹16.8–21L</td><td class="num">₹65L</td></tr>
+      <tr><td>7–9</td><td>Growth Phase</td><td>10–14</td><td>₹8,000</td><td class="num">₹24–33.6L</td><td class="num">₹1.43 Cr</td></tr>
+      <tr><td>10–12</td><td>Market Leadership</td><td>14–18</td><td>₹9,000</td><td class="num">₹37.8–48.6L</td><td class="num">₹2.3 Cr</td></tr>
+      <tr class="tot"><td colspan="4">Full Year Revenue Estimate</td><td class="num-g" colspan="2">₹1.8 Cr – ₹2.5 Cr</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="hb fu">
+    <strong>Break-even estimate:</strong> With monthly fixed costs of approximately ₹4–6L (rent, salaries, consumables, marketing), the clinic reaches break-even around <strong>Month 3–4</strong> and begins meaningful positive cash flow from Month 5 onward. Membership pre-sales in Month 1 can pull this forward to Month 2.
+  </div>
+
+  <div class="grid2 fu">
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <div class="card-h">Why These Numbers Are Conservative</div>
+      <div class="card-b">These projections assume <strong>zero referrals from an existing patient base</strong> and cold acquisition only. If you have current patients as a doctor, Months 1–2 will be materially higher. Memberships sold in advance also de-risk the first 90 days entirely — converting future revenue into present cash.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">📦</div>
+      <div class="card-h">The 20% Product Revenue Rule</div>
+      <div class="card-b">Industry data consistently shows <strong>~20% of clinic revenue</strong> comes from premium skincare retail — not treatments. A curated product shelf adds ₹3–5L/month from Month 4 onward with minimal overhead. This is a profit lever most local clinics completely ignore.</div>
+    </div>
+  </div>
+</div>
+<div class="snum">04 / 09</div>
+</section>
+
+<!-- ══════════════════════════════════ 05 ROADMAP -->
+<section class="alt" id="s5" data-n="5">
+<div class="inner">
+  <p class="kicker fu">05 — 1-Year Master Roadmap</p>
+  <h2 class="sh fu">From Zero to<br><em>Market Leader</em> in 12 Months</h2>
+  <p class="sd fu">Four phases. Each builds on the last. Brand before volume. Trust before traffic. Loyalty before scale. This is how clinics become institutions.</p>
+
+  <div class="two fu">
+    <div>
+      <div class="rm">
+        <div class="ri">
+          <div class="rd"><div class="rdi"></div></div>
+          <div class="rm-q">Q1 · Months 1–3</div>
+          <div class="rm-t">Foundation & Launch</div>
+          <div class="rm-b">Build the brand identity from scratch. Pre-launch buzz on social media. Soft-launch for select founding patients. Collect 50+ Google reviews. Activate local influencers. Sell founding memberships at a launch price.</div>
+        </div>
+        <div class="ri">
+          <div class="rd"><div class="rdi"></div></div>
+          <div class="rm-q">Q2 · Months 4–6</div>
+          <div class="rm-t">Awareness & Penetration</div>
+          <div class="rm-b">Full Google Ads + Meta Ads launch. Before/after transformation content going live. WhatsApp community activated. Referral program running. Bridal package pushed for wedding season. Target: 200+ monthly patients.</div>
+        </div>
+        <div class="ri">
+          <div class="rd"><div class="rdi"></div></div>
+          <div class="rm-q">Q3 · Months 7–9</div>
+          <div class="rm-t">Loyalty & Retention Engine</div>
+          <div class="rm-b">Membership program at scale. Navratri / Dussehra campaigns. Introduce new treatments to spark re-engagement. Corporate tie-ups with nearby IT companies. YouTube "Ask the Doctor" series launched.</div>
+        </div>
+        <div class="ri">
+          <div class="rd"><div class="rdi"></div></div>
+          <div class="rm-q">Q4 · Months 10–12</div>
+          <div class="rm-t">Dominance & Scale Prep</div>
+          <div class="rm-b">Establish as #1 searched clinic in Nizampet. Diwali gift cards & festive campaigns. PR in local Hyderabad media. Evaluate second location. Plan Year 2 strategy. Annual membership renewals.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:1.25rem">
+        <div class="card-h">North Star Goals — End of Year 1</div>
+        <div class="card-b">
+          <strong>#1 Google ranking</strong> for "best skin clinic Nizampet" &amp; adjacent terms<br>
+          <strong>500+ active membership patients</strong><br>
+          <strong>₹2–2.5 Cr annual revenue</strong><br>
+          <strong>4.8★ rating</strong> with 300+ reviews across Google + Practo<br>
+          <strong>15,000+ Instagram followers</strong> (local, targeted)<br>
+          <strong>Brand recall</strong> as Nizampet's luxury skin destination
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:1.25rem">
+        <div class="card-h">Core Philosophy — Why We Win</div>
+        <div class="card-b">Competitors fight on <strong>price and volume.</strong> We fight on <strong>experience, trust, and transformation.</strong><br><br>A patient at your clinic doesn't feel like they visited a clinic. They feel like they visited their personal aesthetic doctor — who knows them, tracks their results, and delivers visible change.</div>
+      </div>
+      <div class="card">
+        <div class="card-h">Your Unfair Advantage</div>
+        <div class="card-b">You are a <strong>qualified doctor.</strong> Not a corporate chain. Not a beauty franchise. Every patient knows a medical professional is treating them. <strong>No competitor in Nizampet can claim this combination of medical credibility + luxury experience.</strong> That combination is impossible to copy overnight.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="snum">05 / 09</div>
+</section>
+
+<!-- ══════════════════════════════════ 06 QUARTERS -->
+<section id="s6" data-n="6">
+<div class="inner">
+  <p class="kicker fu">06 — Quarterly Battle Plan</p>
+  <h2 class="sh fu">4 Quarters.<br><em>4 Distinct Missions.</em></h2>
+  <p class="sd fu">Each quarter has a clear objective, a precise set of activities, and measurable KPIs. You will always know whether you're ahead, on track, or need to course-correct.</p>
+
+  <div class="qg fu">
+    <div class="qc">
+      <div class="qh"><span class="ql">Q1</span><span class="qm">Month 1–3</span></div>
+      <div class="qt">Build the Brand. Own the Narrative.</div>
+      <div class="qb">
+        <div class="qi">Design clinic identity — logo, palette, tone of voice</div>
+        <div class="qi">Build website with SEO foundation &amp; local keywords</div>
+        <div class="qi">Set up Google Business Profile + Practo listing (fully optimized)</div>
+        <div class="qi">Pre-launch Instagram teaser content — behind the scenes</div>
+        <div class="qi">Identify & onboard 3–5 Nizampet micro-influencers</div>
+        <div class="qi">Soft launch — invite-only founding patient batch</div>
+        <div class="qi">Sell 50+ founding memberships at launch price</div>
+        <div class="qi">Collect first 50 Google reviews via post-visit automation</div>
+        <div class="qkpi">Target KPIs: <strong>50+ reviews · 1,000 followers · ₹15–20L revenue</strong></div>
+      </div>
+    </div>
+    <div class="qc">
+      <div class="qh"><span class="ql">Q2</span><span class="qm">Month 4–6</span></div>
+      <div class="qt">Turn On the Visibility Machine.</div>
+      <div class="qb">
+        <div class="qi">Launch Google Ads — local high-intent search keywords</div>
+        <div class="qi">Meta Ads — retargeting, lookalike audiences, interest targeting</div>
+        <div class="qi">Before/after transformation reels — 3x per week minimum</div>
+        <div class="qi">Patient testimonial video series — 1 per week</div>
+        <div class="qi">Launch WhatsApp "Glow Community" for patients</div>
+        <div class="qi">Referral program — ₹500 credit per successful referral</div>
+        <div class="qi">Bridal skincare package push for wedding season</div>
+        <div class="qi">Practo Ads activation for targeted procedures</div>
+        <div class="qkpi">Target KPIs: <strong>200+ patients/month · 150+ reviews · ₹45–65L revenue</strong></div>
+      </div>
+    </div>
+    <div class="qc">
+      <div class="qh"><span class="ql">Q3</span><span class="qm">Month 7–9</span></div>
+      <div class="qt">Build the Loyalty Fortress.</div>
+      <div class="qb">
+        <div class="qi">Scale membership — target 200+ active members</div>
+        <div class="qi">Navratri / Dussehra seasonal skin glow campaign</div>
+        <div class="qi">Introduce 1–2 new treatments to spark buzz + re-booking</div>
+        <div class="qi">WhatsApp + email re-engagement for dormant patients</div>
+        <div class="qi">YouTube — "Ask the Dermatologist" short-form series</div>
+        <div class="qi">Corporate tie-ups with IT companies for employee plans</div>
+        <div class="qi">Press feature in Hyderabad lifestyle / wellness media</div>
+        <div class="qi">Upgrade pathway: move basic patients to premium packages</div>
+        <div class="qkpi">Target KPIs: <strong>300+ patients/month · 350+ members · ₹65–90L revenue</strong></div>
+      </div>
+    </div>
+    <div class="qc">
+      <div class="qh"><span class="ql">Q4</span><span class="qm">Month 10–12</span></div>
+      <div class="qt">Lock In #1. Prepare to Scale.</div>
+      <div class="qb">
+        <div class="qi">Diwali / festive gifting — aesthetic treatment gift cards</div>
+        <div class="qi">Year-end "skin audit" campaign to attract new patients</div>
+        <div class="qi">VIP loyalty event for top-tier Platinum members</div>
+        <div class="qi">Achieve #1 Google for all Nizampet skin/aesthetic terms</div>
+        <div class="qi">Evaluate second location — Bachupally or Kompally</div>
+        <div class="qi">Annual membership renewal cycle launch</div>
+        <div class="qi">Premium skincare retail shelf — curated product line</div>
+        <div class="qi">Year 2 strategy planning — fully data-driven</div>
+        <div class="qkpi">Target KPIs: <strong>#1 Google · 500+ members · ₹80L–1.2Cr Q4 revenue</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="snum">06 / 09</div>
+</section>
+
+<!-- ══════════════════════════════════ 07 MARKETING -->
+<section class="alt" id="s7" data-n="7">
+<div class="inner">
+  <p class="kicker fu">07 — Marketing Strategies Deep Dive</p>
+  <h2 class="sh fu">Every Channel.<br><em>Every Tactic. Every Reason.</em></h2>
+  <p class="sd fu">Not just what we do — but precisely why each tactic works for your market, your audience, and your competitive context. Ten channels, all working together.</p>
+
+  <div class="grid2 fu">
+    <div class="card">
+      <div class="card-icon">📍</div>
+      <div class="card-h">1. Local SEO — Your Free Lead Machine</div>
+      <div class="card-b">Patients who search "best skin clinic near me" are <strong>ready to book right now.</strong> We fully optimize your Google Business Profile, build local citations, and create keyword-rich content.<br><br><strong>Impact:</strong> Customers are 2.7x more likely to trust a business with a complete Google profile. Highest-intent, lowest-cost channel available to you.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">📸</div>
+      <div class="card-h">2. Instagram & Reels — Your Brand Stage</div>
+      <div class="card-b">Before/after reels. Day-in-the-clinic stories. Skincare education in Telugu + Hindi + English. Patient transformation journeys.<br><br><strong>Strategy:</strong> 4–5 posts/week. Reels with local hashtags. Stories for daily engagement. Patient tagging for organic reach. Consistent aesthetic that screams luxury — not clinical.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <div class="card-h">3. Meta Ads — Precision Targeting</div>
+      <div class="card-b">Target women aged 25–48 within 10km of Nizampet. Interest targeting: skincare, anti-aging, Botox, dermatology, beauty. Lookalike audiences built from your patient list.<br><br><strong>Why it works:</strong> CPL (cost per lead) for aesthetic clinics on Meta runs ₹800–1,500. Each converted lead carries ₹6K–₹80K LTV. ROI is exceptionally high.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔍</div>
+      <div class="card-h">4. Google Ads — Capture High Intent</div>
+      <div class="card-b">Target "laser hair removal Nizampet", "Botox clinic Hyderabad", "skin brightening treatment near me".<br><br><strong>Proven results:</strong> Comparable clinic spent ₹73K in ads → 103 qualified leads at ₹710/lead. At 30% conversion = 30 new patients/month. ROI: 40x. This channel pays for itself from Month 1.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤝</div>
+      <div class="card-h">5. Micro-Influencer Partnerships</div>
+      <div class="card-b">Partner with Hyderabad lifestyle influencers with 10K–50K followers. Not celebrities. Real people your target audience trusts and follows for beauty content.<br><br><strong>Model:</strong> Complimentary treatment in exchange for authentic reel + story. 3–5 activations per quarter. Average influencer marketing ROI: 5.2x. Zero cash outlay.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">💬</div>
+      <div class="card-h">6. WhatsApp Community</div>
+      <div class="card-b">Private "Glow Community" for patients — weekly skincare tips, exclusive offers, new treatment previews, seasonal campaigns.<br><br><strong>Why WhatsApp:</strong> 93%+ open rate vs 20% for email. Feels personal. Patients in a community are 3x more likely to return and refer friends. This is your retention engine.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">⭐</div>
+      <div class="card-h">7. Review Strategy — Trust at Scale</div>
+      <div class="card-b">87% of consumers read online reviews before choosing a clinic. We implement automated post-visit WhatsApp messages requesting Google + Practo reviews.<br><br><strong>Target:</strong> 50 reviews by Month 3, 200 by Month 6. 4.8★ vs a competitor at 3.9★ means you win the click — before they've even seen your website.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎁</div>
+      <div class="card-h">8. Referral Program</div>
+      <div class="card-b">Your happy patients are your best salespeople. Formalize it: <strong>₹500 credit</strong> for referring a friend who books. <strong>₹1,000 credit</strong> for a referral who buys a membership.<br><br><strong>Economics:</strong> ₹500 per acquisition vs ₹1,200–2,500 via paid ads. Referred patients also have <strong>50% higher LTV</strong> than paid-acquired patients.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">💼</div>
+      <div class="card-h">9. Corporate Wellness Tie-Ups</div>
+      <div class="card-b">Approach IT companies in KPHB / Nizampet with <strong>employee wellness packages.</strong> Offer on-site skincare consultations or annual discounted membership plans for company staff.<br><br><strong>Why it works:</strong> One tie-up with 200 employees = instant pipeline of high-income professionals who want treatments but haven't been given a reason to visit yet. You are that reason.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">📹</div>
+      <div class="card-h">10. Content Authority — "Ask the Doctor"</div>
+      <div class="card-b">Short-form educational videos: "Should I get Botox at 30?", "What actually removes dark spots?", "Is laser safe for Indian skin tone?"<br><br><strong>Why:</strong> Patients who've been educated by you trust you before they walk in. Educational content converts at 3x the rate of promotional content — and positions you as the expert, not just a service.</div>
+    </div>
+  </div>
+</div>
+<div class="snum">07 / 09</div>
+</section>
+
+<!-- ══════════════════════════════════ 08 OFFERS -->
+<section id="s8" data-n="8">
+<div class="inner">
+  <p class="kicker fu">08 — Launch Offers & Memberships</p>
+  <h2 class="sh fu">Revenue From<br><em>Hour One.</em></h2>
+  <p class="sd fu">Designed to fill your appointment book at launch, create immediate cash flow, and lock in patient loyalty from the very first visit. Every offer has a strategic purpose.</p>
+
+  <p class="kicker fu" style="margin-bottom:1rem">— Launch Offers (Month 1–2 Only)</p>
+  <div class="og fu">
+    <div class="oc">
+      <div class="oi">🪞</div>
+      <div class="ot">Founder's First Visit</div>
+      <div class="ob">Full skin analysis + doctor consultation + personalized treatment plan. <strong>₹499 only</strong> (regular ₹1,500). Limited to first 100 patients. Captures database + begins patient journey.</div>
+    </div>
+    <div class="oc">
+      <div class="oi">✨</div>
+      <div class="ot">Launch Glow Package</div>
+      <div class="ob">Signature facial or skin brightening session + take-home skincare kit. <strong>₹2,999</strong> (regular ₹5,500). First 30 days only. Drives word-of-mouth because results are instantly visible.</div>
+    </div>
+    <div class="oc">
+      <div class="oi">👰</div>
+      <div class="ot">Bridal Radiance Trial</div>
+      <div class="ob">3-session pre-bridal skin prep package. <strong>₹7,999</strong> (regular ₹14,000). Target newly engaged women in Nizampet. Weddings are the highest-spend aesthetic trigger in India.</div>
+    </div>
+    <div class="oc">
+      <div class="oi">👫</div>
+      <div class="ot">Couples Skin Day</div>
+      <div class="ob">Two consultations + basic treatment sessions. <strong>₹3,500 per couple.</strong> Saturday special. Breaks the "it's only for women" barrier and acquires male patients from the start.</div>
+    </div>
+    <div class="oc">
+      <div class="oi">🎁</div>
+      <div class="ot">Refer & Glow</div>
+      <div class="ob">Refer a friend — both get <strong>₹500 credit.</strong> Refer 3 friends — receive a free add-on treatment. Activates from Day 1. Social proof machine with near-zero cost.</div>
+    </div>
+    <div class="oc">
+      <div class="oi">🏢</div>
+      <div class="ot">Corporate Wellness Camp</div>
+      <div class="ob">Free on-site skin analysis at nearby IT offices. <strong>Converts 25–40 new patients per camp.</strong> Cost: your time. Return: ₹5–12L in bookings per event.</div>
+    </div>
+  </div>
+
+  <div class="sep fu"></div>
+  <p class="kicker fu" style="margin-bottom:1.5rem">— Annual Membership Packages</p>
+
+  <div class="mg fu">
+    <div class="mc">
+      <div class="mt">Tier 1</div>
+      <div class="mn">Silver Glow</div>
+      <div class="mp">₹8,999 <span>/ year</span></div>
+      <div class="mpn">₹750 per month equivalent</div>
+      <div class="md"></div>
+      <div class="mi"><span class="mc-check">✦</span> 2 facial treatments included per year</div>
+      <div class="mi"><span class="mc-check">✦</span> 10% off all treatments year-round</div>
+      <div class="mi"><span class="mc-check">✦</span> Priority booking on weekends</div>
+      <div class="mi"><span class="mc-check">✦</span> Free annual skin health review</div>
+      <div class="mi"><span class="mc-check">✦</span> WhatsApp Glow Community access</div>
+      <div class="mi"><span class="mc-check">✦</span> Birthday month — 20% extra discount</div>
+    </div>
+    <div class="mc feat">
+      <div class="mpop">Most Popular</div>
+      <div class="mt">Tier 2</div>
+      <div class="mn">Gold Radiance</div>
+      <div class="mp">₹18,999 <span>/ year</span></div>
+      <div class="mpn">₹1,583 per month equivalent</div>
+      <div class="md"></div>
+      <div class="mi"><span class="mc-check">✦</span> 6 treatments per year — mix &amp; match</div>
+      <div class="mi"><span class="mc-check">✦</span> 20% off all treatments year-round</div>
+      <div class="mi"><span class="mc-check">✦</span> Complimentary HydraFacial on enrollment</div>
+      <div class="mi"><span class="mc-check">✦</span> Premium skincare welcome gift</div>
+      <div class="mi"><span class="mc-check">✦</span> Priority same-day booking</div>
+      <div class="mi"><span class="mc-check">✦</span> Quarterly skin progress tracking report</div>
+      <div class="mi"><span class="mc-check">✦</span> Invitation to exclusive member events</div>
+    </div>
+    <div class="mc">
+      <div class="mt">Tier 3</div>
+      <div class="mn">Platinum Luxe</div>
+      <div class="mp">₹39,999 <span>/ year</span></div>
+      <div class="mpn">₹3,333 per month equivalent</div>
+      <div class="md"></div>
+      <div class="mi"><span class="mc-check">✦</span> 12 premium treatments per year</div>
+      <div class="mi"><span class="mc-check">✦</span> 30% off all treatments + retail products</div>
+      <div class="mi"><span class="mc-check">✦</span> Dedicated personal skin therapist</div>
+      <div class="mi"><span class="mc-check">✦</span> Annual comprehensive skin audit report</div>
+      <div class="mi"><span class="mc-check">✦</span> 2 complimentary guest passes per year</div>
+      <div class="mi"><span class="mc-check">✦</span> Direct WhatsApp line to the doctor</div>
+      <div class="mi"><span class="mc-check">✦</span> First access to all new treatments</div>
+      <div class="mi"><span class="mc-check">✦</span> Annual luxury skincare gift set</div>
+    </div>
+  </div>
+
+  <div class="hb fu">
+    <strong>Membership Revenue Math:</strong> 200 Silver + 100 Gold + 30 Platinum memberships sold in Year 1 = <strong>₹46L+ in locked-in annual recurring revenue</strong> before a single walk-in patient books a treatment. This pre-committed cash flow de-risks the entire venture and lets you invest in growth with confidence.
+  </div>
+</div>
+<div class="snum">08 / 09</div>
+</section>
+
+<!-- ══════════════════════════════════ 09 CLOSE -->
+<section class="alt" id="s9" data-n="9">
+<div class="inner">
+  <p class="kicker fu">09 — Why This Strategy Wins</p>
+  <h2 class="sh fu">Not Just a Plan.<br><em>A System Built to Dominate.</em></h2>
+  <p class="sd fu">Every element is interconnected. Each tactic feeds the next. Each quarter compounds the last. This is not a marketing plan — it's a market takeover blueprint.</p>
+
+  <div class="wg fu">
+    <div class="wc">
+      <div class="wn">01</div>
+      <div>
+        <div class="wct">Research-Backed, Not Guesswork</div>
+        <div class="wcb">Every recommendation is grounded in real market data from Grand View Research and IMARC Group, actual competitor intelligence from Nizampet's live landscape, and proven tactics from aesthetic clinics that achieved 150–400% revenue growth.</div>
+      </div>
+    </div>
+    <div class="wc">
+      <div class="wn">02</div>
+      <div>
+        <div class="wct">Hyper-Local Precision</div>
+        <div class="wcb">Built specifically for Nizampet — its demographics, its competitors, its growth arc, and its cultural context. Not a generic playbook. Every tactic is chosen for this specific geography and audience.</div>
+      </div>
+    </div>
+    <div class="wc">
+      <div class="wn">03</div>
+      <div>
+        <div class="wct">Brand Before Ads</div>
+        <div class="wcb">We build your brand before we scale your advertising. This ensures you attract premium patients, not bargain hunters. Your pricing power, retention rate, and LTV all depend on a correct brand foundation in the first 90 days.</div>
+      </div>
+    </div>
+    <div class="wc">
+      <div class="wn">04</div>
+      <div>
+        <div class="wct">Five Revenue Streams</div>
+        <div class="wcb">Treatments + Memberships + Product Retail + Corporate Plans + Bridal Packages. No dependence on any single channel. Seasonal campaigns ensure consistent revenue across the full calendar year.</div>
+      </div>
+    </div>
+    <div class="wc">
+      <div class="wn">05</div>
+      <div>
+        <div class="wct">Clear KPIs Every Quarter</div>
+        <div class="wcb">Specific, measurable targets at the end of every quarter. No ambiguity. You'll know exactly where you stand at all times — and we'll course-correct in real time before problems become trends.</div>
+      </div>
+    </div>
+    <div class="wc">
+      <div class="wn">06</div>
+      <div>
+        <div class="wct">Built for Multi-Location Scale</div>
+        <div class="wcb">By Year 2, the brand equity, review volume, membership base, and social following built in Year 1 become the foundation for Location 2. One successful clinic becomes a regional chain. That is the end goal.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta fu">
+    <div class="cta-h">The Market Is Ready.<br><em>Nizampet Is Waiting.</em></div>
+    <p class="cta-s">The window for luxury first-mover positioning in this corridor will not stay open indefinitely. Every month of inaction is market share handed to competitors who move faster. The time is now.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <span class="btn">Begin Month 1 →</span>
+    </div>
+  </div>
+
+  <div style="text-align:center">
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center">
+      <span class="tag">Market Research ✓</span>
+      <span class="tag">Competitor Audit ✓</span>
+      <span class="tag">Financial Model ✓</span>
+      <span class="tag">Q1–Q4 Plan ✓</span>
+      <span class="tag">10 Marketing Channels ✓</span>
+      <span class="tag">Launch Offers ✓</span>
+      <span class="tag">3-Tier Membership ✓</span>
+      <span class="tag">Scale Roadmap ✓</span>
+    </div>
+  </div>
+</div>
+<div class="snum">09 / 09</div>
+</section>
+
+<footer>
+  Confidential Strategy Document · Luxury Aesthetic Clinic — Nizampet, Hyderabad · Prepared May 2026
+</footer>
+
+<script>
+const slides = ['s0','s1','s2','s3','s4','s5','s6','s7','s8','s9'];
+const dotsEl = document.getElementById('dots');
+slides.forEach((id,i)=>{
+  const d = document.createElement('div');
+  d.className='dot';
+  d.title='Slide '+i;
+  d.onclick=()=>go(id);
+  dotsEl.appendChild(d);
+});
+
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+
+window.addEventListener('scroll',()=>{
+  const total=document.body.scrollHeight-window.innerHeight;
+  document.getElementById('bar').style.width=(window.scrollY/total*100)+'%';
+  const navBtns=document.querySelectorAll('.nl');
+  const dotBtns=document.querySelectorAll('.dot');
+  let cur=0;
+  slides.forEach((id,i)=>{
+    const el=document.getElementById(id);
+    if(el && window.scrollY>=el.offsetTop-200) cur=i;
+  });
+  navBtns.forEach((b,i)=>b.classList.toggle('on',i===cur));
+  dotBtns.forEach((b,i)=>b.classList.toggle('on',i===cur));
+});
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')});
+},{threshold:.08});
+document.querySelectorAll('.fu').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
+apps-fileview.texmex_20260521.00_p0
+Aesthetic_clinic_pitch_deck-Spack Solutions.html
+Page 16 of 18 Page 15 of 18
